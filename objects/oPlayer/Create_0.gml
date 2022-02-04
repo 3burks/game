@@ -11,7 +11,7 @@ xVector = xSpeed * xDirection;
 yVector = 0;
 
 //gravity levels
-grv = 0.0;
+grv = 0.4;
 
 jumpForce = -10;
 

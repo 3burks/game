@@ -2,7 +2,7 @@
 //keyboard inputs
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
-jump = keyboard_check_pressed(vk_up);
+jump = keyboard_check_pressed(vk_space);
 
 //x-movement
 xDirection = right - left;
@@ -16,8 +16,8 @@ if (place_meeting(x + xVector, y, oWall))
 		// ! = "not"
 		while(!place_meeting(x + xVector, y, oWall))
 			{
-		//only move 1 pixel until hit oWall
-			x = x + xVector;
+			//only move 1 pixel until hit oWall
+			x = x + xDirection;
 			}
 			xVector = 0; 
 	}
