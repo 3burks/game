@@ -18,3 +18,9 @@ jumpForce = -10;
 //coins & points
 global.coins = 0
 global.points = 0
+
+//invicibility
+isInvicible = false;
+
+//hp
+hp = 6;

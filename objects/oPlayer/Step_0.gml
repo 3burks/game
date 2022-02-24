@@ -2,10 +2,11 @@
 //keyboard inputs
 right = keyboard_check(vk_right);
 left = keyboard_check(vk_left);
-jump = keyboard_check_pressed(vk_space);
+jump = keyboard_check_pressed (vk_space);
 
 //x-movement
 xDirection = right - left;
+
 xVector = xSpeed * xDirection;
 
 //check to see if theres a wall, then stop movement, otherwise 
@@ -27,7 +28,7 @@ x = x + xVector;
 //y-movement
 yVector = yVector + grv;
 
-if (place_meeting(y + yVector, x, oWall))
+if (place_meeting(x, y + yVector, oWall))
 	{
 	//check one pixel to the up or down of us until we collide with a oWall
 	// ! = "not"
@@ -47,4 +48,10 @@ y = y + yVector;
 if (place_meeting(x, y + 1, oWall) and (jump))
 	{
 	yVector = jumpForce;
+	}
+
+//die in pit,restart
+if (y >= room_height)
+	{
+		PlayerDeath();
 	}
